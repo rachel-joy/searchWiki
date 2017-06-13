@@ -11,7 +11,6 @@ function search() {
     dataType: 'json',
     url: "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + keyword + "&limit=10&namespace=0&format=json&warningsaserror=true&callback=?",
     success: function(data) {
-      console.log(data);
       displayData(data);
     }
 
