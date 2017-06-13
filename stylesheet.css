@@ -16,3 +16,7 @@ ul, li {
   padding-top: 25px;
   font-size: 15px;
 }
+
+#error-center {
+  text-align: center;
+}

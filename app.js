@@ -17,6 +17,7 @@ function search() {
   });
 
   function displayData(data) {
+
     // remove old search results
     $("#searchResults").children().remove();
 
@@ -24,8 +25,12 @@ function search() {
     if (data[1].length === 0) {
       var errorMessage = "<p>No search results found.</p>";
       $("#searchResults").append(errorMessage);
+
+      // reset search query
+      $("#query").val("");
     }
     else {
+
       //iterate through data, store in variables and display it
       for(var i = 0; i < data[1].length; i++) {
         var title = data[1][i];
@@ -33,8 +38,9 @@ function search() {
         var link = data[3][i];
         var display = '<li class="list-group-item-action"><a href =' + link + ">" + title + "</a><p>" + summary + "</p></li>";
         $("#searchResults").append(display);
+
         // reset search query
-        // $("#query").html("");
+        $("#query").val("");
       }
     }
   }
