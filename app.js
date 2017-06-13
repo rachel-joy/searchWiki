@@ -18,6 +18,8 @@ function search() {
   });
 
   function displayData(data) {
+    // remove old search results
+    $("#searchResults").children().remove();
 
     // handle zero search results
     if (data[1].length === 0) {
