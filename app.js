@@ -26,7 +26,7 @@ function search() {
 
     // if zero search results do this
     if (data[1].length === 0) {
-      var errorMessage = "<p>No search results found.</p>";
+      var errorMessage = "<p>Oops, no search results found. Try again!</p>";
       $("#searchResults").append(errorMessage);
 
       // reset search query
