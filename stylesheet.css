@@ -5,6 +5,8 @@ ul, li {
 
 .container-spacing {
   padding-top: 20px;
+  max-width: 70%;
+  margin: auto;
 }
 
 #searchResultsBox {
@@ -19,4 +21,10 @@ ul, li {
 
 #error-center {
   text-align: center;
+}
+
+@media (max-width: 375px) {
+  .container-spacing {
+    max-width: 90%;
+  }
 }

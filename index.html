@@ -12,9 +12,11 @@
       <div class="row justify-content-center container-spacing">
         <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Show me a random wiki article.</a>
       </div>
-      <div class="row justify-content-center container-spacing">
-        <input id="query" type="text" placeholder="Search Wikipedia">
-        <button onclick="search()">Go!</button>
+      <div class="row justify-content-center container-spacing input-group">
+        <input id="query" class="form-control" type="text" placeholder="Search Wikipedia">
+        <span class="input-group-btn">
+          <button class="btn btn-secondary" onclick="search()" type="button">Go!</button>
+        </span>
       </div>
       <div id="searchResultsBox" class="row">
           <ul id="searchResults" class="list-group"></ul>

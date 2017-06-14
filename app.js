@@ -4,8 +4,10 @@
 
 function search() {
 
+  // store search query in variable
   var keyword = document.getElementById("query").value;
 
+  // request data from wikipedia
   $.ajax({
     type: 'GET',
     dataType: 'json',
@@ -16,12 +18,13 @@ function search() {
 
   });
 
+  // when ajax request is successful, this function runs
   function displayData(data) {
 
     // remove old search results
     $("#searchResults").children().remove();
 
-    // handle zero search results
+    // if zero search results do this
     if (data[1].length === 0) {
       var errorMessage = "<p>No search results found.</p>";
       $("#searchResults").append(errorMessage);
@@ -31,7 +34,7 @@ function search() {
     }
     else {
 
-      //iterate through data, store in variables and display it
+      //iterate through data, store each article title, summary and link in variables and display
       for(var i = 0; i < data[1].length; i++) {
         var title = data[1][i];
         var summary = data[2][i];
