@@ -9,6 +9,14 @@ ul, li {
   margin: auto;
 }
 
+.jumbotron:hover {
+  background-color: #E2FFD1;
+}
+
+.list-style {
+  font-size: 20px;
+}
+
 #searchResultsBox {
   padding-top: 15px;
   margin: 5px;

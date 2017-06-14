@@ -39,8 +39,11 @@ function search() {
         var title = data[1][i];
         var summary = data[2][i];
         var link = data[3][i];
-        var display = '<li class="list-group-item-action"><a href =' + link + ">" + title + "</a><p>" + summary + "</p></li>";
+        var display = '<li class="jumbotron list-group-item-action"><a class="list-style" href = ' + link + ">" + title + "</a><p>" + summary + "</p></li>";
         $("#searchResults").append(display);
+
+        // add jumbotron to search results
+        // $("#searchResults").addClass("jumbotron");
 
         // reset search query
         $("#query").val("");
