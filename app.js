@@ -1,6 +1,14 @@
 
+$(document).ready(function() {
 
-
+  // listen for enter/return key and run search function
+  $("input").on("keypress", function keyboardSearch(event) {
+    //keyCode 13 is Enter/Return key
+    if (event.which === 13 && $("input").val() !== "") {
+      search($("input").val());
+    }
+  });
+});
 
 function search() {
 
@@ -42,12 +50,11 @@ function search() {
         var display = '<li class="jumbotron list-group-item-action"><a class="list-style" href = ' + link + ">" + title + "</a><p>" + summary + "</p></li>";
         $("#searchResults").append(display);
 
-        // add jumbotron to search results
-        // $("#searchResults").addClass("jumbotron");
 
         // reset search query
         $("#query").val("");
       }
     }
   }
+
 }
